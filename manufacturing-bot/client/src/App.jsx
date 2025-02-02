@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import Orders from './pages/Orders';
+import OrderDetails from './pages/OrderDetails';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
@@ -16,6 +18,16 @@ function App() {
         <Route path="/dashboard" element={
           <ProtectedRoute>
             <Dashboard />
+          </ProtectedRoute>
+        } />
+        <Route path="/orders" element={
+          <ProtectedRoute>
+            <Orders />
+          </ProtectedRoute>
+        } />
+        <Route path="/order/:orderId" element={
+          <ProtectedRoute>
+            <OrderDetails />
           </ProtectedRoute>
         } />
       </Routes>
