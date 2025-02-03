@@ -116,7 +116,7 @@ const seedOrders = async (userId) => {
 };
 
 // Use the test user ID we created earlier
-const USER_ID = '679f9604be05f6620a98fe1a';
+const USER_ID = '679f855aaeb4e51c22cf4403';  // Updated user ID
 
 if (!USER_ID) {
   console.error('Please provide a valid USER_ID at the bottom of this script');
