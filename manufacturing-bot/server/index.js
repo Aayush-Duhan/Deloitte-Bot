@@ -5,6 +5,7 @@ const connectDB = require('./config/database');
 const authRoutes = require('./routes/auth');
 const orderRoutes = require('./routes/orders');
 const notificationRoutes = require('./routes/notifications');
+const adminAuthRoutes = require('./routes/admin/auth');
 
 const app = express();
 
@@ -17,6 +18,7 @@ connectDB();
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/admin/auth', adminAuthRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/notifications', notificationRoutes);
 
@@ -30,4 +32,4 @@ process.on('unhandledRejection', (err) => {
   console.error('Unhandled Promise Rejection:', err);
   // Close server & exit process
   server.close(() => process.exit(1));
-}); 
+});

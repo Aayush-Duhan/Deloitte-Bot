@@ -8,7 +8,15 @@ const notificationSchema = new mongoose.Schema({
   },
   type: {
     type: String,
-    enum: ['order', 'email', 'system'],
+    enum: [
+      'confirmation_required',
+      'order_confirmed',
+      'processing_started',
+      'order_completed',
+      'order_rejected',
+      'status_update',
+      'system'
+    ],
     default: 'system'
   },
   message: {
@@ -27,4 +35,4 @@ const notificationSchema = new mongoose.Schema({
   timestamps: true
 });
 
-module.exports = mongoose.model('Notification', notificationSchema); 
+module.exports = mongoose.model('Notification', notificationSchema);
