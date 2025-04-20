@@ -6,6 +6,7 @@ const authRoutes = require('./routes/auth');
 const orderRoutes = require('./routes/orders');
 const notificationRoutes = require('./routes/notifications');
 const adminAuthRoutes = require('./routes/admin/auth');
+const usersRoutes = require('./routes/users'); // user
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/admin/auth', adminAuthRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use('/api/users', usersRoutes);  // Add user routes
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
