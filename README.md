@@ -2,6 +2,8 @@
 
 An intelligent, scalable order automation tool built for manufacturing workflows. This system processes email-based orders using AI-powered filtering (Langflow + OpenAI), generates real-time confirmations, and reduces manual intervention for B2B order fulfillment.
 
+- View the design : [Figma](https://www.figma.com/design/3ueJNIzNk4zG15Wch5PjTo/Deloitte-Prototype?node-id=0-1&p=f)
+
 
 ## 🚀 Features
 
